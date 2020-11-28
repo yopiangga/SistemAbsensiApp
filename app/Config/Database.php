@@ -34,9 +34,9 @@ class Database extends \CodeIgniter\Database\Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'db_absentapp',
+		'username' => 'u653333183_db_absensiapp',
+		'password' => 'DB_absensiapp2020',
+		'database' => 'u653333183_db_asbensiapp',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
