@@ -36,7 +36,7 @@ class Team extends BaseController
                 ],
             ]);
             if (!$valid) {
-                return redirect()->to('/team/createteam')->withInput();
+                return redirect()->to(base_url('/team/createteam'))->withInput();
             } else {
                 $data = [
                     'id_team' => $this->Uuid->v4(),
@@ -45,7 +45,7 @@ class Team extends BaseController
                 $this->TeamModel->insert($data);
                 $this->session->setFlashdata('message', 'Team sudah di buat, Team : ' . $data['name']);
             }
-            return redirect()->to('/team')->withInput();
+            return redirect()->to(base_url('/team'))->withInput();
         }
         $data = [
             'validation' => \config\Services::validation()
@@ -74,7 +74,7 @@ class Team extends BaseController
                 ],
             ]);
             if (!$valid) {
-                return redirect()->to('/team/editteam')->withInput();
+                return redirect()->to(base_url('/team/editteam'))->withInput();
             } else {
                 $data = [
                     'name' => $this->request->getVar('name'),
@@ -83,7 +83,7 @@ class Team extends BaseController
                 $this->TeamModel->update($id, $data);
                 $this->session->setFlashdata('message', 'Team sudah di update, Team : ' . $data['name']);
             }
-            return redirect()->to('/team')->withInput();
+            return redirect()->to(base_url('/team'))->withInput();
         }
         return view('team/edit', $data);
     }
@@ -93,7 +93,7 @@ class Team extends BaseController
         if ($data = $this->TeamModel->find($id)) {
             $this->TeamModel->delete($id);
             $this->session->setFlashdata('message', 'Team sudah di hapus, Team : ' . $data['name']);
-            return redirect()->to('/team')->withInput();
+            return redirect()->to(base_url('/team'))->withInput();
         }
         return redirect()->back();
     }

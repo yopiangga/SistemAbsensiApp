@@ -23,7 +23,7 @@ $this->section('content'); ?>
                                     <div class="alert alert-danger errorMessage d-none" role="alert">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
+                                        <label for="exampleInputEmail1">Username</label>
                                         <input type="text" class="form-control" placeholder="Username" name="username" id="username" placeholder="Email">
                                         <div class="invalid-feedback errorUsername">
                                         </div>

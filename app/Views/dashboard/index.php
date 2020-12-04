@@ -1,6 +1,30 @@
 <?= $this->extend('templates/template-dashboard');
 $this->section('content'); ?>
 
+<?php
+$hadir = 0;
+$alpha = 0;
+$pulang = 0;
+$users = $user->findAll();
+foreach ($users as $item) {
+    if ($isAbsent = $absent
+        ->where('user_id', $item['id_user'])
+        ->where('tanggal', date('d'))
+        ->where('bulan', date('m'))
+        ->where('tahun', date('Y'))
+        ->first()
+    ) {
+        $hadir++;
+        if ($isAbsent['jam_masuk'] != "00:00:00" && $isAbsent['jam_keluar'] != "00:00:00") {
+            $pulang++;
+        }
+    } else {
+        $alpha++;
+    }
+}
+?>
+
+
 <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
     <div>
         <h4 class="mb-3 mb-md-0">Selamat datang di AbsensiApp</h4>
@@ -27,7 +51,7 @@ $this->section('content'); ?>
                         </div>
                         <div class="row">
                             <div class="col-6 col-md-12 col-xl-5">
-                                <h3 class="mb-2">54</h3>
+                                <h3 class="mb-2"><?= $hadir ?></h3>
                                 <div class="d-flex align-items-baseline">
                                 </div>
                             </div>
@@ -55,7 +79,7 @@ $this->section('content'); ?>
                         </div>
                         <div class="row">
                             <div class="col-6 col-md-12 col-xl-5">
-                                <h3 class="mb-2">7</h3>
+                                <h3 class="mb-2"><?= $alpha ?></h3>
                                 <div class="d-flex align-items-baseline">
                                 </div>
                             </div>
@@ -83,7 +107,7 @@ $this->section('content'); ?>
                         </div>
                         <div class="row">
                             <div class="col-6 col-md-12 col-xl-5">
-                                <h3 class="mb-2">17</h3>
+                                <h3 class="mb-2"><?= $pulang ?></h3>
                                 <div class="d-flex align-items-baseline">
                                 </div>
                             </div>

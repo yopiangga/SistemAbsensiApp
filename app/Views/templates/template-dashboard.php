@@ -9,7 +9,7 @@ $dUser = $UserModel->find(session('id'))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?= isset($title) ? $title : 'Si POS - Management' ?></title>
+    <title><?= isset($title) ? $title : 'AbsensiApp - Management' ?></title>
     <link rel="stylesheet" href="<?= base_url() ?>/assets/vendors/core/core.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/fonts/feather-font/css/iconfont.css">
@@ -110,7 +110,7 @@ $dUser = $UserModel->find(session('id'))
                                 <div class="dropdown-body">
                                     <ul class="profile-nav p-0 pt-3">
                                         <li class="nav-item">
-                                            <a href="login.html" class="nav-link">
+                                            <a href="<?= base_url("/auth/logout") ?>" class="nav-link">
                                                 <i data-feather="log-out"></i>
                                                 <span>Keluar</span>
                                             </a>

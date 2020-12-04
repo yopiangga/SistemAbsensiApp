@@ -226,7 +226,7 @@ class User extends BaseController
                 ]);
             }
             if (!$valid) {
-                return redirect()->to('/user/adduser')->withInput();
+                return redirect()->to(base_url('/user/adduser'))->withInput();
             } else {
                 $this->request->getVar('role') == "5f8731b9-9e73-4d0d-b37e-4dc4a981bd50" ? $team = ' ' : $team = $this->request->getVar('team');
                 $data = [
@@ -251,7 +251,7 @@ class User extends BaseController
                 $this->UserModel->insert($data);
                 $this->session->setFlashdata('message', 'User sudah di buat, User : ' . $data['display_name']);
             }
-            return redirect()->to('/user')->withInput();
+            return redirect()->to(base_url('/user'))->withInput();
         }
         $user = $this->UserModel->find(session('id'));
         if ($user['team_id'] == null || $user['team_id'] == ' ') {
@@ -324,7 +324,7 @@ class User extends BaseController
                     ],
                 ]);
                 if (!$valid) {
-                    return redirect()->to('/user/edituser/' . $id)->withInput();
+                    return redirect()->to(base_url('/user/edituser/' . $id))->withInput();
                 } else {
                     if ($this->request->getVar('role') == "5f8731b9-9e73-4d0d-b37e-4dc4a981bd50") {
                         $data = [
@@ -350,7 +350,7 @@ class User extends BaseController
                     $this->UserModel->update($id, $data);
                     $this->session->setFlashdata('message', 'Team sudah di update, Team : ' . $data['display_name']);
                 }
-                return redirect()->to('/user');
+                return redirect()->to(base_url('/user'));
             }
             return view('user/edit', $data);
         }
@@ -382,7 +382,7 @@ class User extends BaseController
                 $this->TeamModel->update($user['team_id'], $data);
             }
             $this->UserModel->delete($id);
-            return redirect()->to('/user');
+            return redirect()->to(base_url('/user'));
         }
         return redirect()->back();
     }
