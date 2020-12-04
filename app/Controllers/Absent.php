@@ -9,7 +9,7 @@ class Absent extends BaseController
 {
     public function index()
     {
-        return redirect()->to('dashboard');
+        return redirect()->to(base_url('dashboard'));
     }
     public function check()
     {
@@ -169,7 +169,7 @@ class Absent extends BaseController
                 }
             }
             $this->session->setFlashdata('message', 'Status Absent sudah di ganti menjadi' . $this->request->getVar('status') . ', Terimakasih ^_^.');
-            return redirect()->to(session('back'));
+            return redirect()->to(base_url(session('back')));
         }
         $data = [
             'user' => $this->UserModel->find($userId),
