@@ -15,7 +15,7 @@ $this->section('content'); ?>
                             </div>
                             <div class="col-md-8 pl-md-0">
                                 <div class="auth-form-wrapper px-4 py-5">
-                                    <a href="#" class="noble-ui-logo d-block mb-2">Absensi<span>App</span></a>
+                                    <a href="#" class="noble-ui-logo d-block mb-2">Report<span>App</span></a>
                                     <h5 class="text-muted font-weight-normal mb-4">Selamat Datang! Masuk dengan akun anda.</h5>
                                     <?php $attributes = ['id' => 'form-login'];
                                     echo form_open('auth/user_login', $attributes);

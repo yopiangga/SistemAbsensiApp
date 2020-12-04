@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Edit Team - Pembukuan</title>
+	<link rel="stylesheet" href="assets/vendors/core/core.css">
+  <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="assets/fonts/feather-font/css/iconfont.css">
+	<link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+	<link rel="stylesheet" href="assets/css/demo_1/style.css">
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/vendors/sweetalert2/sweetalert2.min.css">
+  <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/datatables/rowReorder.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/datatables/responsive.dataTables.min.css">
+</head>
+<body>
+	<div class="main-wrapper">
+
+		<nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="#" class="sidebar-brand">
+          Report<span>App</span>
+        </a>
+        <div class="sidebar-toggler not-active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="sidebar-body">
+        <ul class="nav">
+          <li class="nav-item nav-category">Utama</li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="link-icon" data-feather="box"></i>
+              <span class="link-title">Beranda</span>
+            </a>
+          </li>
+
+          <li class="nav-item nav-category">Admin</li>
+          <li class="nav-item">
+            <a href="create-my-transaction-admin.html" class="nav-link">
+              <i class="link-icon" data-feather="file-plus"></i>
+              <span class="link-title">Tambah Transaksi Saya</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="report-my-transaction-admin.html" class="nav-link">
+              <i class="link-icon" data-feather="file"></i>
+              <span class="link-title">Laporan Transaksi Saya</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="report-all-transaction.html" class="nav-link">
+              <i class="link-icon" data-feather="file-text"></i>
+              <span class="link-title">Laporan Semua Transaksi</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transaction-not-paid.html" class="nav-link">
+              <i class="link-icon" data-feather="file-minus"></i>
+              <span class="link-title">Transaksi Belum Dibayar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="create-user-admin.html" class="nav-link">
+              <i class="link-icon" data-feather="user-plus"></i>
+              <span class="link-title">Tambah User (Admin)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="manage-user-admin.html" class="nav-link">
+              <i class="link-icon" data-feather="users"></i>
+              <span class="link-title">Kelola User (Admin)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="create-team.html" class="nav-link">
+              <i class="link-icon" data-feather="user-plus"></i>
+              <span class="link-title">Tambah Tim</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="manage-team.html" class="nav-link">
+              <i class="link-icon" data-feather="users"></i>
+              <span class="link-title">Kelola Tim</span>
+            </a>
+          </li>
+          
+          
+
+          <li class="nav-item nav-category">Ketua Tim</li>
+          <li class="nav-item">
+            <a href="create-my-transaction-team.html" class="nav-link">
+              <i class="link-icon" data-feather="file-plus"></i>
+              <span class="link-title">Tambah Transaksi Saya</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="report-my-transaction-team.html" class="nav-link">
+              <i class="link-icon" data-feather="file"></i>
+              <span class="link-title">Laporan Transaksi Saya</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="report-team-transaction.html" class="nav-link">
+              <i class="link-icon" data-feather="file-text"></i>
+              <span class="link-title">Laporan Transaksi Tim</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="create-user-team.html" class="nav-link">
+              <i class="link-icon" data-feather="user-check"></i>
+              <span class="link-title">Tambah User Tim</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="manage-user-team.html" class="nav-link">
+              <i class="link-icon" data-feather="users"></i>
+              <span class="link-title">Kelola User Tim</span>
+            </a>
+          </li>
+          
+
+          <li class="nav-item nav-category">User</li>
+          <li class="nav-item">
+            <a href="create-my-transaction-user.html" class="nav-link">
+              <i class="link-icon" data-feather="file-plus"></i>
+              <span class="link-title">Tambah Transaksi Saya</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="report-my-transaction-user.html" class="nav-link">
+              <i class="link-icon" data-feather="file"></i>
+              <span class="link-title">Laporan Transaksi Saya</span>
+            </a>
+          </li>
+        
+
+          <li class="nav-item nav-category">Akun</li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="link-icon" data-feather="log-out"></i>
+              <span class="link-title">Keluar</span>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+	
+		<div class="page-wrapper">
+					
+			<nav class="navbar">
+				<a href="#" class="sidebar-toggler">
+					<i data-feather="menu"></i>
+				</a>
+				<div class="navbar-content">
+					<ul class="navbar-nav">
+
+						<li class="nav-item dropdown nav-profile">
+							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<img src="assets/images/faces/face1.jpg" alt="profile">
+							</a>
+							<div class="dropdown-menu" aria-labelledby="profileDropdown">
+								<div class="dropdown-header d-flex flex-column align-items-center">
+									<div class="figure mb-3">
+										<img src="assets/images/faces/face1.jpg" alt="">
+									</div>
+									<div class="info text-center">
+										<p class="name font-weight-bold mb-0">Admin IT</p>
+										<p class="email text-muted mb-3">superadmin@admin.com</p>
+									</div>
+								</div>
+								<div class="dropdown-body">
+									<ul class="profile-nav p-0 pt-3">
+										<li class="nav-item">
+											<a href="login.html" class="nav-link">
+												<i data-feather="log-out"></i>
+												<span>Log Out</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="page-content">
+        
+        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+          <div>
+            <h4 class="mb-3 mb-md-0">Edit Team</h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 col-lg-6 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">Form Edit Team</h6>
+                <p class="card-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <form class="forms-sample">
+                  <div class="form-group row">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="name">Name Team</label>
+                        <input id="name" class="form-control" name="name" type="text" value="Team A">
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Update">
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+			</div>
+
+			<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-center">
+				<p class="text-muted text-center text-md-left">Copyright © 2020 <a href="" target="_blank">DataGroup</a>. All rights reserved</p>
+			</footer>
+		
+		</div>
+	</div>
+
+	<script src="assets/vendors/core/core.js"></script>
+  <script src="assets/vendors/chartjs/Chart.min.js"></script>
+  <script src="assets/vendors/jquery.flot/jquery.flot.js"></script>
+  <script src="assets/vendors/jquery.flot/jquery.flot.resize.js"></script>
+  <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+	<script src="assets/vendors/feather-icons/feather.min.js"></script>
+	<script src="assets/js/template.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/datepicker.js"></script>
+
+  <script src="assets/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="assets/js/data-table.js"></script>
+    <script src="assets/vendors/datatables.net/dataTables.buttons.min.js"></script>
+    <script src="assets/vendors/datatables.net/buttons.print.min.js"></script>
+
+    <script src="assets/ajax/jszip.min.js"></script>
+    <script src="assets/ajax/pdfmake.min.js"></script>
+    <script src="assets/ajax/vfs_fonts.js"></script>
+    <script src="assets/ajax/buttons.html5.min.js"></script>
+
+    <script src="assets/js/datatables/dataTables.rowReorder.min.js"></script>
+    <script src="assets/js/datatables/dataTables.responsive.min.js"></script>
+
+</body>
+
+</html>    

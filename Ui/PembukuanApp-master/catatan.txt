@@ -1,0 +1,113 @@
+---------------------------------------------------
+#Fitur
+1. Absen Online / Finger
+2. Pembukuan per bulan
+3. Kas 
+4. 
+
+--------------------------------------------------
+Posisi :
+
+1. Admin
+	- Ambil data semua team, dan editable
+
+2. Ketua
+	- Ambil data semua user dalam tim dan editable
+
+3. User
+	- Input data personal yang dikerjakan tiap hari
+
+---------------------------------------------------
+Aksesable :
+1. User input : Penerima, kota, no hp, empot, lainnya, omset, barang, r omset, r barang, jenius, top up, tgh harian
+
+2. Admin : sama seperti user input ditambah dengan edit resi dan status
+
+---------------------------------------------------
+Rumus : 
+
+- nama : sesuai login name
+- penerima : input biasa
+- kota kab : input biasa selection
+- no hp		: input biasa
+- Resi		: Input biasa dan editable admin, cod / transfer
+- status	: Selection lunas / tidak /  tdk valid dan ditambah tanggal
+- empot (Nama Produk) 	: Input jumlah produk yang dijual 
+- Lainnya (Nama Produk)	: Input jumlah produk yang dijual
+- jumlah barang : jumlah 
+- Omset		: Input biasa
+- Barang	: Input Biasa
+- R omset	: ambil dari omset yang gagal
+- R barang 	: ambil dari barang yang gagal
+- Jenius	: Ketua Tim boleh ngisi dan keatas
+- Top Up	: Input uang yang di lakukan ketua tim
+- Tgh harian 	: Tagihan keluar iklan, beda dengan barang
+
+------------------------------------------------------
+
+Create user :
+- nama
+- panggilan
+- user / ketua / admin
+- email / username
+- password
+- Nama tim (jika user meng create user)
+
+------------------------------------------------------
+
+Create tim :
+- Nama tim
+- 
+
+------------------------------------------------------
+create barang :
+- nama barang
+- jenis barang
+
+
+
+
+
+
+
+------------------------------------------------------
+Bulanan report
+- tanggal	: 1 - 30
+- closing 	: Total closing per tanggal
+
+- nama		: User penginput jual produk
+- closing 	: per satubulan user 
+- retur		: Per satu bulan user
+- Batal		: Per satu bulan user
+- Ro		: Per satu bulan user aka masuk pada closing
+- Total input	: total semua kecuali RO
+- PER CLOSING 	: 1 X 10.000
+- Total 	: Closing x per closing 
+
+catatan : RO 20.000 bukan RO 10.000
+
+--------------------------------------------------------
+
+Bulanan
+
+- Tanggal	: Tnggal 1 - 30 
+- omset		: Total omset harian semua tim
+- Retur omset	: total retur omset semua tim dalam sehari
+- barang 	: Total barang harga semua tim dalam sehari
+- tagihan	: total tagihan barang semua tim
+- Laba rugi	: Omset - retur omset - barang - tagihan
+- Saldo		: Saldo hari kemarin + laba rugi hari ini
+
+- top up total 	: Tagihan
+
+
+---------------------------------------------------------
+Wajib
+
+1. Pembukuan personal
+2. Tim
+3. Global
+
+---------------------------------------------------------
+Absensi	:
+- Menggunakan login online untuk absensi
